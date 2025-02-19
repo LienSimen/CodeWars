@@ -1,0 +1,8 @@
+using System.Linq;
+public class Kata
+{
+    public static string FakeBin(string x)
+    {
+        return string.Concat(x.Select(c => c < '5' ? '0' : '1'));
+    }
+}
