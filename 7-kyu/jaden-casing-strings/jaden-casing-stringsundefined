@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+​
+public static class JadenCase
+{
+    public static string ToJadenCase(this string phrase)
+    {
+        if (string.IsNullOrEmpty(phrase))
+        {
+            return string.Empty;
+        }
+        List<string> phrases = new();
+        string[] words = phrase.Split(' ');
+​
+        foreach(var word in words)
+        {
+            phrases.Add(char.ToUpper(word[0]) +  word.Substring(1));
+        }
+        return string.Join(" ", phrases);
+    }
+}
