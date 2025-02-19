@@ -1,0 +1,10 @@
+using System.Reflection.Metadata.Ecma335;
+using System.Text.RegularExpressions;
+​
+public class Kata
+{
+    public static bool Alphanumeric(string str)
+    {
+        return Regex.IsMatch(str, @"^[a-zA-Z0-9]+$");
+    }
+}
