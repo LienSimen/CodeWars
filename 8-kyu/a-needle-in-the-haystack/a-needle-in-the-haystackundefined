@@ -1,0 +1,12 @@
+using System;
+using System.Linq;
+​
+public class Kata
+{
+    public static string FindNeedle(object[] haystack)
+    {
+        //Code goes here!
+        var needlePos = Array.IndexOf(haystack, "needle");
+        return $"found the needle at position {needlePos}";
+    }
+}
