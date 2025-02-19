@@ -1,0 +1,11 @@
+using System.Linq;
+using System;
+using System.IO.Compression;
+public static class Kata
+{
+    public static bool XO(string input)
+    {
+        input = input.ToLower();
+        return input.Count(c => c == 'x') == input.Count(c => c == 'o');
+    }
+}
