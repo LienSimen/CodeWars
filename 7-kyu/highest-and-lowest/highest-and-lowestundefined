@@ -1,0 +1,12 @@
+using System;
+using System.Linq;
+​
+public static class Kata
+{
+    public static string HighAndLow(string numbers)
+    {
+        var numArray = numbers.Split().Select(int.Parse).ToArray();
+        return $"{numArray.Max()} {numArray.Min()}";
+    }
+}
+​
