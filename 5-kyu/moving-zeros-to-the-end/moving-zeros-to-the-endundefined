@@ -1,0 +1,11 @@
+using System;
+using System.Linq;
+public class Kata
+{
+    public static int[] MoveZeroes(int[] arr)
+    {
+        var nonZeroes = arr.Where(c => c != 0).ToArray();
+        var zeroes = arr.Where(c => c == 0).ToArray();
+        return [.. nonZeroes, .. zeroes];
+    }
+}
