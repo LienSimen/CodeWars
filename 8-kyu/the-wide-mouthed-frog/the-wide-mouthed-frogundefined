@@ -1,0 +1,14 @@
+using System.Linq;
+using System;
+​
+public class Kata
+{
+    public static string MouthSize(string animal)
+    {
+        if (animal.ToLower().Contains("alligator"))
+        {
+            return "small";
+        }
+        return "wide";
+  }
+}
