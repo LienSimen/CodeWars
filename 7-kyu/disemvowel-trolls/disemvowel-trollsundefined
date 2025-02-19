@@ -1,0 +1,10 @@
+using System;
+using System.Linq;
+​
+public static class Kata
+{
+    public static string Disemvowel(string str)
+    {
+        return new string(str.Where(c => !"aeiouAEIOU".Contains(c)).ToArray());
+    }
+}
