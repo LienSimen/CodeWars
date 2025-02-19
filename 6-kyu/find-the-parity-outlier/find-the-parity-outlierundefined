@@ -1,0 +1,13 @@
+using System.Linq;
+​
+public class Kata
+{
+    public static int Find(int[] integers)
+    {
+        var evens = integers.Where(n => n % 2 == 0);
+        var odds = integers.Where(n => n % 2 != 0);
+        //Is even count 1? then evens.single returns the num, else odd.single
+        return evens.Count() == 1 ? evens.Single() : odds.Single();
+    }
+}
+​
