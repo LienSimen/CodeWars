@@ -1,0 +1,13 @@
+using System.Linq;
+​
+public class Kata
+{
+    public static bool BetterThanAverage(int[] ClassPoints, int YourPoints)
+    {
+        var classAvg = ClassPoints.Sum() / ClassPoints.Length;
+        if (classAvg >= YourPoints)
+        {return false;}
+        return true;
+        
+    }
+}
