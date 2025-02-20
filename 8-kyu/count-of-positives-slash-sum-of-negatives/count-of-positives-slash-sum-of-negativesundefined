@@ -1,0 +1,19 @@
+using System;
+using System.Linq;
+​
+public class Kata
+{
+    public static int[] CountPositivesSumNegatives(int[] input)
+    {
+        if (input == null || input.Length == 0)
+        {
+            return new int[0];
+        }
+​
+        int positiveCount = input.Count(c => c > 0);
+        int negativeSum = input.Where(c => c < 0).Sum();
+​
+        return new int[] { positiveCount, negativeSum };
+    }
+}
+​
