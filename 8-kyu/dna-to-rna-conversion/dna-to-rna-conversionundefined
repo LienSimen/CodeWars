@@ -1,0 +1,10 @@
+using System.Linq;
+namespace Converter {
+  public class Converter
+  {
+    public string dnaToRna(string dna)
+    {
+      return dna.Replace('t', 'u').Replace('T', 'U');
+    }
+  }
+}
