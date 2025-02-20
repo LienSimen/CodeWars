@@ -1,0 +1,20 @@
+ 
+using System.Linq;
+​
+public static class Kata {
+    public static int TotalPoints(string[] games) {
+        var sum = 0;
+        foreach (var game in games)
+        {
+            var scores = game.Split(':');
+            var x = int.Parse(scores[0]);
+            var y = int.Parse(scores[1]);
+​
+            if (x > y)
+            sum += 3;
+            else if (x == y)
+            sum += 1;
+        }
+        return sum;
+    }
+}
