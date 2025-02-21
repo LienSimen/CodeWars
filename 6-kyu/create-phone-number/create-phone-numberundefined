@@ -1,0 +1,12 @@
+using System.Text.RegularExpressions;
+using System.Linq;
+public class Kata
+{
+  public static string CreatePhoneNumber(int[] numbers)
+  {
+    return string.Format("({0}) {1}-{2}", 
+        string.Join("", numbers.Take(3)), 
+        string.Join("", numbers.Skip(3).Take(3)), 
+        string.Join("", numbers.Skip(6).Take(4)));
+  }
+}
