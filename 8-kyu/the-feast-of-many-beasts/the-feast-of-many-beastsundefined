@@ -1,0 +1,17 @@
+ 
+using System.Linq;
+public class Kata
+{
+    public static bool Feast(string beast, string dish)
+    {
+      var beastFirst = beast.ToCharArray().First().ToString();
+      var beastLast = beast.ToCharArray().Last().ToString();
+      var dishFirst = dish.ToCharArray().First().ToString();
+      var dishLast = dish.ToCharArray().Last().ToString();
+      if (beastFirst == dishFirst && beastLast == dishLast)
+      {
+        return true;
+      }
+      return false;
+    }
+}
