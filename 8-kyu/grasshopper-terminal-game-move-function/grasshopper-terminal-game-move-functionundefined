@@ -5,6 +5,6 @@ public class Game
 {
   public static int Move(int position, int roll) 
   {
-    return position + (roll * 2;
+    return position + roll * 2;
   }
 }
