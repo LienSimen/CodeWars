@@ -1,0 +1,11 @@
+using System.Linq;
+​
+public static class Kata
+{
+    public static int sumTwoSmallestNumbers(int[] numbers)
+    {
+        //Code here...
+​
+        return numbers.OrderBy(n => n).Take(2).Sum();
+    }
+}
