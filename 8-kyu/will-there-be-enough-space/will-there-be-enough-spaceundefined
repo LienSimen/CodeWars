@@ -1,0 +1,12 @@
+ 
+using System;
+using System.Numerics;
+using Microsoft.VisualBasic;
+​
+public static class Kata
+{
+  public static int Enough(int cap, int on, int wait)
+  {
+    return Math.Max(0, (on + wait) - cap);
+  }
+}
