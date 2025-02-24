@@ -1,0 +1,7 @@
+ 
+using System;
+​
+public class Kata
+{
+    public static char GetChar(int charcode) => Convert.ToChar(charcode);
+}
