@@ -1,0 +1,18 @@
+ 
+using System;
+​
+namespace Solution
+{
+    public static class Program
+    {
+        public static string StringsSum(string s1, string s2)
+        {
+            int num1 = string.IsNullOrEmpty(s1) ? 0 : Convert.ToInt32(s1);
+            int num2 = string.IsNullOrEmpty(s2) ? 0 : Convert.ToInt32(s2);
+​
+            int sum = num1 + num2;
+            return sum.ToString();
+        }
+    }
+}
+​
