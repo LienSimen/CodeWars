@@ -1,0 +1,12 @@
+using System;
+public class Sum
+{
+    public int GetSum(int a, int b)
+    {
+        var start = Math.Min(a, b);
+        var end = Math.Max(a, b);
+​
+        return (end - start + 1) * (start + end) / 2;
+    }
+}
+​
