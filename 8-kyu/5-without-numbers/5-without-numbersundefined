@@ -1,9 +1,10 @@
  
+using System;
 class Kata
 {
     public static int UnusualFive()
     {
-        Console.WriteLine(␅);
+        Console.WriteLine('␅');
         return 5;
     }
 }
