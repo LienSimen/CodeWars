@@ -1,0 +1,12 @@
+using System;
+using System.Linq;
+​
+public class Kata
+{
+    public static int CountBits(int n)
+    {
+        var binaryString = Convert.ToString(value: n, toBase: 2);
+        var numberOfOnes = binaryString.Count(k => k == '1');
+        return numberOfOnes;
+    }
+}
