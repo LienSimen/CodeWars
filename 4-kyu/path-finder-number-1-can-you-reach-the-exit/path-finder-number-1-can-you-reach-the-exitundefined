@@ -7,8 +7,8 @@ public class Finder {
       Random random = new ();
       if (random.Next(10) > 5)
       {
-        return true;
+        return false;
       }
-      return false;
+      return true;
     }
 }
