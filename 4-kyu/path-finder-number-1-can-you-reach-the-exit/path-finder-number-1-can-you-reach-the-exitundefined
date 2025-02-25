@@ -1,4 +1,6 @@
  
+using System;
+​
 public class Finder {
     
     public static bool PathFinder(string maze) {
