@@ -1,0 +1,10 @@
+using System.Collections.Generic;
+using System.Linq;
+​
+public static class Kata
+{
+  public static IEnumerable<T> UniqueInOrder<T>(IEnumerable<T> iterable) 
+  {
+    return iterable.Where((currentEle, index) => index == 0 || !currentEle.Equals(iterable.ElementAt(index - 1)));
+  }
+} 
