@@ -10,7 +10,6 @@ public class Xbonacci
     {
       return new double[n];
     }
-    double[] result = new double[n];
         return Enumerable.Range(0, n)
             .Select(i => i < 3 ? signature[i] : signature[i - 1] + signature[i - 2] + signature[i - 3])
             .ToArray();
