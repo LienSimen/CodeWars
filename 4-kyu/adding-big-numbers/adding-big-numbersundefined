@@ -1,0 +1,15 @@
+ 
+using System;
+using System.Numerics;
+​
+public class Kata
+{
+  public static string Add(string a, string b)
+  {
+    BigInteger num1 = BigInteger.Parse(a);
+    BigInteger num2 = BigInteger.Parse(b);
+    var sum = num1 + num2;
+​
+    return sum.ToString();
+  }
+}
