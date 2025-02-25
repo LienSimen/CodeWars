@@ -1,0 +1,9 @@
+using System.Linq;
+​
+public static class Kata
+{
+  public static string AlphabetPosition(string text)
+    {
+        return string.Join(" ", text.ToLower().Where(char.IsLetter).Select(c => (c - 'a' + 1).ToString()));
+    }
+}
