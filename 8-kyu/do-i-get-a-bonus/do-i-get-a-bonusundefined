@@ -1,0 +1,13 @@
+ 
+public static class Kata
+    {
+        public static string bonus_time(int salary, bool bonus)
+        {
+            if (bonus == true)
+            {
+              var moneys = (salary * 10).ToString();
+              return $"${moneys}";
+            }
+            return $"${salary}";
+        }
+    }
