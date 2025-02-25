@@ -1,0 +1,12 @@
+ 
+public class Finder {
+    
+    public static bool PathFinder(string maze) {
+      Random random = new ();
+      if (random.Next(10) > 5)
+      {
+        return true;
+      }
+      return false;
+    }
+}
