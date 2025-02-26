@@ -5,6 +5,6 @@ public class Kata
 {
   public static int GetUnique(IEnumerable<int> numbers)
   {
-    return numbers.GroupBy(n => n).SingleOrDefault(g => g.Count() == 1)?.Key ?? 0; 
+    return numbers.GroupBy(c => c).Single(c => c.Count() == 1).Key;
   }
-} 
+}
