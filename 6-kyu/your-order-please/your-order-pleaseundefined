@@ -1,0 +1,19 @@
+using System;
+using System.Text.RegularExpressions;
+​
+public static class Kata
+{
+  public static string Order(string words)
+  {
+    var wordArray = words.Split(' ');
+​
+    Array.Sort(wordArray, (x, y) => 
+    {
+        int xNum = int.Parse(Regex.Match(x, "\\d").Value);
+        int yNum = int.Parse(Regex.Match(y, @"\d").Value);
+        return xNum.CompareTo(yNum);
+    });
+​
+    return string.Join(" ", wordArray);
+  }
+}
