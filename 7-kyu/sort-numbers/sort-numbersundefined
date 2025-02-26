@@ -1,0 +1,15 @@
+ 
+using System;
+using System.Linq;
+​
+public class Kata
+{
+    public static int[] SortNumbers(int[] nums)
+    {
+        if (nums == null || nums.Length == 0)
+            return new int[] { };
+        
+        return nums.OrderBy(n => n).ToArray();
+    }
+}
+​
