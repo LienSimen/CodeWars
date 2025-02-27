@@ -1,0 +1,10 @@
+using System;
+using System.Linq;
+​
+public static class Kata
+{
+  public static bool IsPangram(string str)
+  {
+    return str.ToLower().Where(char.IsLetter).GroupBy(c => c).Count() == 26;
+  }
+}
