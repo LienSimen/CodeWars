@@ -1,0 +1,11 @@
+ 
+using System.Text.RegularExpressions;
+​
+public static class Kata
+{
+    public static int CountSmileys(string[] smileys) 
+    {
+        return Regex.Matches(string.Join(" ", smileys), @"[:;][-~]?[)D]").Count;
+    }
+}
+​
