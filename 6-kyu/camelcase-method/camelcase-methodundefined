@@ -1,0 +1,16 @@
+ 
+using System.Linq;
+​
+namespace Kata
+{
+  public static class Problem
+  {
+    public static string CamelCase(this string str)  
+    {
+​
+      return string.Join("", str.Split(" ").Where(c => c.Length > 0).ToArray().Select(c => c.First().ToString().ToUpper() + c.Substring(1)));
+    }
+  }
+}
+​
+​
