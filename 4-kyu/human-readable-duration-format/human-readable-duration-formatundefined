@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+​
+public class HumanTimeFormat {
+  public static string formatDuration(int seconds) {
+    if (seconds == 0)
+      return "now";
+    
+    int years = seconds / (3600 * 24 * 365);
+    int days = (seconds % (3600 * 24 * 365)) / (3600 * 24);
+    int hours = (seconds % (3600 * 24)) / 3600;
+    int minutes = (seconds % 3600) / 60;
+    int secs = seconds % 60;    
+​
+    List<string> parts = new List<string>();
+    
+    if (years > 0)
+      parts.Add($"{years} year{(years > 1 ? "s" : "")}");
+    
+    if (days > 0)
+      parts.Add($"{days} day{(days > 1 ? "s" : "")}");
+      
+    if (hours > 0)
+      parts.Add($"{hours} hour{(hours > 1 ? "s" : "")}");
+​
+    if (minutes > 0)
+      parts.Add($"{minutes} minute{(minutes > 1 ? "s" : "")}");
+    
+    if (secs > 0)
+      parts.Add($"{secs} second{(secs > 1 ? "s" : "")}");
+​
+    return parts.Count > 1 
+        ? string.Join(", ", parts.Take(parts.Count - 1)) + " and " + parts.Last()
+        : parts[0];
+  }
+}
+​
