@@ -1,0 +1,13 @@
+using System.Linq;
+public class Kata
+{
+    public static string OddOrEven(int[] array)
+    {
+        var sum = array.Sum();
+        if (sum % 2 == 0)
+        {
+            return "even";
+        }
+        return "odd";
+    }
+}
