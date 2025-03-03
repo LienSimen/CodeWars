@@ -1,0 +1,10 @@
+ 
+using System.Linq;
+​
+public class Kata
+{
+    public static string ToCamelCase(string str)
+    {
+        return string.Join("", str.Split(['-', '_']).Select((s, i) => i == 0 ? s : char.ToUpper(s[0]) + s[1..]));
+    }
+}
