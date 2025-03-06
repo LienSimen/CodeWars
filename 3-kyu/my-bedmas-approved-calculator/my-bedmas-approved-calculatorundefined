@@ -1,30 +1,10 @@
+ 
 using System;
 ​
 public static class Kata 
 {
     public static double Calculate(string s)
     {
-        char[] operators = new char[] {'/', '+', '-', '*'};
-        foreach (char op in operators)
-        {
-            if (s.Contains(op))
-            {
-                string[] parts = s.Split(op);
-                double left = double.Parse(parts[0]);
-                double right = double.Parse(parts[1]);
-                switch (op)
-                {
-                    case '+':
-                        return left + right;
-                    case '-':
-                        return left - right;
-                    case '*':
-                        return left * right;
-                    case '/':
-                        return left / right;
-                }
-            }
-        }
-        throw new ArgumentException("No valid operator found in the string.");
+        return Convert.ToDouble(new DataTable().Compute(s, null));
     }
 }
