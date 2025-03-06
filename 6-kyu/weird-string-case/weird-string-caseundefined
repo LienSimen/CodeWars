@@ -1,0 +1,13 @@
+using System;
+using System.Linq;
+​
+public class Kata
+{
+  public static string ToWeirdCase(string s)
+  {
+      var words = s.Split(' ');
+      var result = words.Select(word => string.Concat(word.Select((c, i) => i % 2 == 0 ? char.ToUpper(c) : char.ToLower(c))));
+      return string.Join(" ", result);
+  }
+}
+​
