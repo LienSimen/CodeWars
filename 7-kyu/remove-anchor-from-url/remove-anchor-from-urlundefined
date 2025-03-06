@@ -1,0 +1,9 @@
+ 
+using System.Linq;
+public static class Kata
+{
+  public static string RemoveUrlAnchor(string url)
+  {
+    return new string(url.TakeWhile(c => c != '#').ToArray());
+  }
+}
