@@ -1,0 +1,12 @@
+using System;
+using System.Linq;
+​
+public class Printer 
+{
+    public static string PrinterError(String s) 
+    {
+        int errorCount = s.Count(c => c < 'a' || c > 'm');
+        return $"{errorCount}/{s.Length}";
+    }
+}
+​
