@@ -1,4 +1,3 @@
- 
 using System;
 ​
 public interface IUnit
@@ -31,7 +30,7 @@ public class TankState : IUnitState
     public TankState()
     {
       CanMove = true;
-      Damage = 10;
+      Damage = 5;
     }
 ​
     public bool CanMove { get; set; }
@@ -47,6 +46,6 @@ public class Tank : IUnit
 ​
     public IUnitState State { get; set; }
 ​
-    public bool CanMove { get; }
-    public int Damage { get; }
+    public bool CanMove => State.CanMove;
+    public int Damage => State.Damage;
 }
