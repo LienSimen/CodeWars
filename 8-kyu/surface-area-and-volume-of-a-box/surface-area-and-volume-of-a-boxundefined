@@ -1,11 +1,12 @@
+ 
 using System;
 ​
-    public class Kata
+public class Kata
+{
+    public static int[] Get_size(int w, int h, int d)
     {
-        public static int[] Get_size(int w,int h,int d)
-        {
-            int surface = 2 * (w * h * h * d * w * d);
-            int volume = w * h * d;
-            return new int[] { surface, volume};
-        }
+        int surfaceArea = 2 * (w * h + h * d + w * d);
+        int volume = w * h * d;
+        return new int[] { surfaceArea, volume };
     }
+}
