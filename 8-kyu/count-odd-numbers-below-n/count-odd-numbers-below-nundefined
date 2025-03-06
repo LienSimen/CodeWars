@@ -1,0 +1,12 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+​
+public static class Kata
+{
+    public static ulong OddCount(ulong n)
+    {
+        return n / 2;
+    }
+}
+​
