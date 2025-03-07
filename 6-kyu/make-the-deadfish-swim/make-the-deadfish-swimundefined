@@ -1,0 +1,34 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+​
+public class Deadfish
+{
+  public static int[] Parse(string data)
+  {
+    var sum = 0;
+    var result = new List<int>();
+    foreach (char c in data)
+    {
+        if (c == 'i')
+        {
+            sum++;
+        }
+        if (c == 'd')
+        {
+            sum--;
+        }
+        if (c == 's')
+        {
+            sum *= sum;
+        }
+        if (c == 'o')
+        {
+            result.Add(sum);
+        }
+    }
+    return result.ToArray();
+​
+  }
+}
