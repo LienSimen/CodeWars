@@ -1,37 +1,33 @@
  
 using System.Text;
-using System.Linq;
 ​
 public class HQ9
 {
     public static string Interpret(string code)
     {
-        if (code == "H")
-            return "Hello World!";
-        
-        if (code == "Q")
-            return code;
-        
+        if (code == "H") return "Hello World!";
+        if (code == "Q") return "Q";
         if (code == "9")
         {
-            var song = new StringBuilder();
+            var sb = new StringBuilder();
             for (int i = 99; i > 0; i--)
             {
-                var bottles = i == 1 ? "bottle" : "bottles";
-                var nextBottles = (i - 1) == 1 ? "bottle" : "bottles";
-                var nextCount = (i - 1) > 0 ? $"{i - 1}" : "no more";
+                var bottle = i > 1 ? "bottles" : "bottle";
+                var nextBottles = (i - 1) > 1 ? "bottles" : "bottle";
+                var nextCount = i - 1 > 0 ? (i - 1).ToString() : "no more";
 ​
-                song.AppendLine($"{i} {bottles} of beer on the wall, {i} {bottles} of beer.");
-                song.AppendLine($"Take one down and pass it around, {nextCount} {nextCount == "1" ? "bottle" : "bottles"} of beer on the wall.");
+                sb.AppendLine($"{i} {bottleOrBottles(i)} of beer on the wall, {i} {bottleOrBottles(i)} of beer.");
+                sb.AppendLine($"Take one down and pass it around, {nextCount} {bottleOrBottles(i - 1)} of beer on the wall.");
             }
 ​
-            song.AppendLine("No more bottles of beer on the wall, no more bottles of beer.");
-            song.Append("Go to the store and buy some more, 99 bottles of beer on the wall.");
+            sb.AppendLine("No more bottles of beer on the wall, no more bottles of beer.");
+            sb.Append("Go to the store and buy some more, 99 bottles of beer on the wall.");
 ​
-            return song.ToString();
+            return sb.ToString();
         }
-​
         return null;
     }
+​
+    private static string bottleOrBottles(int count) => count == 1 ? "bottle" : "bottles";
 }
 ​
