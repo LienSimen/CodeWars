@@ -14,14 +14,22 @@ public class HQ9
     {
       return code;
     }
-    if(code.Contains('9'))
+    if (code == "9")
     {
-      var numberOfBottles = 99;
-      for (int i = numberOfBottles; i > 0; i--)
+      var song = new StringBuilder();
+      for (int i = 99; i > 0; i--)
       {
-        return $"{i} bottles of beer on the wall, {i} bottles of beer.\nTake one down and pass it around, {i - 1} bottles of beer on the wall.";
+        song.AppendLine($"{i} {(i == 1 ? "bottle" : "bottles")} of beer on the wall, {i} {(i == 1 ? "bottle" : "bottles")} of beer.");
+        song.AppendLine($"Take one down and pass it around, {(i - 1 == 0 ? "no more" : (i - 1).ToString())} {(i - 1 == 1 ? "bottle" : "bottles")} of beer on the wall.");
+        song.AppendLine();
       }
 ​
-    }return null;
+      song.AppendLine("No more bottles of beer on the wall, no more bottles of beer.");
+      song.AppendLine("Go to the store and buy some more, 99 bottles of beer on the wall.");
+​
+      return song.ToString().TrimEnd();
+​
+    }
+    return null;
   }
 }
