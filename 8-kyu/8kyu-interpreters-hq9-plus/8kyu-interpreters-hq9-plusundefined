@@ -1,3 +1,4 @@
+ 
 using System.Text;
 ​
 public class HQ9
@@ -23,6 +24,6 @@ public class HQ9
         lyrics.AppendLine();
       }
       return lyrics.ToString();
-    }return null:
+    }return null;
   }
 }
