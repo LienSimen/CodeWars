@@ -1,34 +1,36 @@
  
 using System.Text;
-using System.Linq;
 ​
 public class HQ9
 {
-  public static string Interpret(string code)
-  {
-    if (code.Contains('H'))
-      return "Hello World!";
-      
-    if (code.Contains('Q'))
-      return code;
-​
-    if (code.Contains('9'))
+    public static string Interpret(string code)
     {
-      var song = new StringBuilder();
-      for (int i = 99; i >= 1; i--)
-      {
-        string current = i == 1 ? "bottle" : "bottles";
-        string next = (i - 1) == 1 ? "bottle" : "bottles";
-        string nextCount = (i - 1) == 0 ? "no more" : (i - 1).ToString();
+        if (code == "H")
+            return "Hello World!";
+        
+        if (code == "Q")
+            return code;
+        
+        if (code == "9")
+        {
+            var song = new StringBuilder();
+            for (int i = 99; i > 0; i--)
+            {
+                var bottles = i == 1 ? "bottle" : "bottles";
+                var nextBottles = (i - 1) == 1 ? "bottle" : "bottles";
+                var nextCount = (i - 1) > 0 ? $"{i - 1}" : "no more";
 ​
-        song.AppendLine($"{i} {current} of beer on the wall, {i} {current} of beer.");
-        song.AppendLine($"Take one down and pass it around, {nextCount} {next} of beer on the wall.");
-      }
+                song.AppendLine($"{i} {bottles} of beer on the wall, {i} {bottles} of beer.");
+                song.AppendLine($"Take one down and pass it around, {nextCount} {nextCount == "1" ? "bottle" : "bottles"} of beer on the wall.");
+            }
 ​
-      return song.ToString().TrimEnd();
+            song.AppendLine("No more bottles of beer on the wall, no more bottles of beer.");
+            song.Append("Go to the store and buy some more, 99 bottles of beer on the wall.");
+​
+            return song.ToString();
+        }
+​
+        return null;
     }
-​
-    return null;
-  }
 }
 ​
