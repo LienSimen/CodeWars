@@ -1,0 +1,25 @@
+ 
+using System.Linq;
+​
+public class EvenOrOddKata
+{
+  public static string EvenOrOdd(string str)
+  {
+  var evenNumbersSum = str.Where(c => c % 2 == 0).Sum(c => (int)char.GetNumericValue(c));
+  var oddNumbersSum = str.Where(c => c % 2 != 0).Sum(c => (int)char.GetNumericValue(c));
+  if(evenNumbersSum == oddNumbersSum)
+  {
+    return "Even and Odd are the same";
+  }
+  if(evenNumbersSum > oddNumbersSum)
+  {
+    return "Even is greater than Odd";
+  }
+  if(evenNumbersSum == oddNumbersSum)
+  {
+    return "Odd is greater than Even";
+  }
+​
+    return string.Empty;
+  }
+}
