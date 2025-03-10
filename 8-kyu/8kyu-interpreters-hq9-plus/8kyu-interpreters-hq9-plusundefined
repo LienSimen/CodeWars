@@ -14,7 +14,7 @@ public class HQ9
     {
       return code;
     }
-    if(code == "9")
+    if(code.Contains('9'))
     {
       var numberOfBottles = 99;
       for (int i = numberOfBottles; i > 0; i--)
