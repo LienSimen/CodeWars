@@ -1,5 +1,6 @@
  
 using System.Text;
+using System.Linq;
 ​
 public class HQ9
 {
@@ -16,14 +17,11 @@ public class HQ9
     if(code == "9")
     {
       var numberOfBottles = 99;
-      var lyrics = new StringBuilder();
       for (int i = numberOfBottles; i > 0; i--)
       {
-        lyrics.AppendLine($"{i} bottles of beer on the wall, {i} bottles of beer.");
-        lyrics.AppendLine($"Take one down and pass it around, {i - 1} bottles of beer on the wall.");
-        lyrics.AppendLine();
+        return $"{i} bottles of beer on the wall, {i} bottles of beer.\nTake one down and pass it around, {i - 1} bottles of beer on the wall.";
       }
-      return lyrics.ToString();
+​
     }return null;
   }
 }
