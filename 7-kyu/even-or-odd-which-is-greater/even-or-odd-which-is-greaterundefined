@@ -15,7 +15,7 @@ public class EvenOrOddKata
   {
     return "Even is greater than Odd";
   }
-  if(evenNumbersSum == oddNumbersSum)
+  if(evenNumbersSum < oddNumbersSum)
   {
     return "Odd is greater than Even";
   }
