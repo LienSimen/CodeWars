@@ -3,13 +3,8 @@ using System.Linq;
 ​
 public class Kata
 {
-  public static bool CorrectTail(string body, string tail)
+  public static string PrintArray(object[] array)
   {
-    string sub = body.Substring(body.Length - tail.Length);
-    
-    if (sub == tail)
-      return true;
-    else
-      return false;
+    return string.Join(",", array.Select(x => x.ToString()));
   }
 }
