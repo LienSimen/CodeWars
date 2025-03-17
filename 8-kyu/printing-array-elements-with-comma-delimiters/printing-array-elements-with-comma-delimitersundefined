@@ -1,4 +1,6 @@
  
+using System.Linq;
+​
 public class Kata
 {
   public static bool CorrectTail(string body, string tail)
