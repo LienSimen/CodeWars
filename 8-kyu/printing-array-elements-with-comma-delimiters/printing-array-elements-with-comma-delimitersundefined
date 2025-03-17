@@ -1,0 +1,19 @@
+using System.Linq;
+​
+public class Kata
+{
+    public static string PrintArray(object[] array)
+    {
+        return string.Join(",", array.Select(x =>
+            x is object[] nestedArray ? PrintArray(nestedArray) : x.ToString()
+        ));
+    }
+​
+    public static bool CorrectTail(string body, string tail)
+    {
+        string sub = body.Substring(body.Length - tail.Length);
+        
+        return sub == tail;
+    }
+}
+​
