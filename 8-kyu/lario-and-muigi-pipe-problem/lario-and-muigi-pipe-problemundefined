@@ -1,0 +1,13 @@
+ 
+using System.Collections.Generic;
+using System.Linq;
+​
+public class Fixer
+{
+  public static List<int> PipeFix(List<int> numbers)
+  {
+    var minNum = numbers.Min();
+    var maxNum = numbers.Max();
+    return (List<int>)Enumerable.Range(minNum, maxNum);
+  }
+}
