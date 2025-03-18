@@ -8,6 +8,6 @@ public class Fixer
   {
     var minNum = numbers.Min();
     var maxNum = numbers.Max();
-    return (List<int>)Enumerable.Range(minNum, maxNum);
+    return Enumerable.Range(minNum, maxNum - minNum + 1).ToList();
   }
 }
