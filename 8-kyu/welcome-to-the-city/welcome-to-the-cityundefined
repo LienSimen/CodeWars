@@ -3,6 +3,6 @@ public class Kata
 {
   public static string SayHello(string[] name, string city, string state)
   {
-    return $"Hello, {name[0]} {name[1]}! Welcome to {city}, {state}.";
+    return $"Hello, {name[0]} {name[1]}! Welcome to {city}, {state}!";
   }
 }
