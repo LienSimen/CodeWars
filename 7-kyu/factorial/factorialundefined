@@ -1,0 +1,13 @@
+using System;
+using System.Linq;
+​
+public static class Kata
+{
+  public static int Factorial(int n)
+  {
+    if (n > 12 || n < 0) throw new ArgumentOutOfRangeException();
+    if (n != 0)
+    return Enumerable.Range(1, n).Aggregate((acc, num) => acc * num);
+    return 1;
+  }
+}
