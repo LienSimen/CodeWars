@@ -1,13 +1,9 @@
  
-using System.ComponentModel;
-using System.Globalization;
-using System.Linq;
-​
 public class Kata
 {
   public static string CapitalizeWord(string word)
   {
-    
-    return char.ToUpper(word.ToCharArray().First()).ToString();
+    word = char.ToUpper(word[0]) + word.Substring(1);
+    return word;
   }
 }
