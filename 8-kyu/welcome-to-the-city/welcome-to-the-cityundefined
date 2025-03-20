@@ -5,3 +5,4 @@ public class Kata
   {
     return $"Hello, {string.Join(" ", name)}! Welcome to {city}, {state}.";
   }
+}
