@@ -11,7 +11,6 @@ public class Kata
 ​
     foreach(var word in titleArray)
     {
-      if (Regex.Match(title, word).Success)
         return char.ToUpper(word[0]) + word.Substring(1);
     }
     return "";
