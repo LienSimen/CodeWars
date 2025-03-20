@@ -1,0 +1,13 @@
+using System;
+using System.Globalization;
+​
+public class Kata
+{
+  public static int HexToDec(string hexString)
+  {
+    if (hexString.StartsWith("-"))
+      return -Convert.ToInt32(hexString.Substring(1), 16);
+    return Convert.ToInt32(hexString, 16);
+  }
+}
+​
