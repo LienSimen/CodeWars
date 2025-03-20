@@ -1,0 +1,14 @@
+using System.Collections.Generic;
+​
+public class Kata
+{
+    public static List<int> FindMultiples(int n, int limit)
+    {
+        var multiples = new List<int>();
+        for (int i = n; i <= limit; i += n)
+        {
+            multiples.Add(i);
+        }
+        return multiples;
+    }
+}
