@@ -1,0 +1,10 @@
+ 
+public class Kata
+{
+  public static int Mango(int quantity, int price)
+  {
+    int paidMangoes = quantity / 3 * 2 + (quantity % 3);
+    return paidMangoes * price;
+  }
+}
+​
