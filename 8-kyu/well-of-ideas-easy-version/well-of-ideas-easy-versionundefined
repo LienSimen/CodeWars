@@ -1,0 +1,14 @@
+using System.Linq;
+public class Kata
+{
+  public static string Well(string[] x)
+  {
+    return x.GroupBy(c => c)
+            .Where(c => c.Key == "good")
+            .Sum(c => c.Count()) > 2 
+            ? "I smell a series!" 
+            : x.Contains("good") 
+              ? "Publish!" 
+              : "Fail!";
+  }
+}
