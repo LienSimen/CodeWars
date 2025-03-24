@@ -1,0 +1,15 @@
+using System.Collections.Generic;
+​
+public class Kata
+{
+  public static string[] AddLength(string str)
+  {
+    var resultList = new List<string>();
+    var wordArray = str.Split(' ');
+    foreach (var word in wordArray)
+    {
+      resultList.Add(word + " " + word.Length);
+    }
+    return resultList.ToArray();
+  }
+}
