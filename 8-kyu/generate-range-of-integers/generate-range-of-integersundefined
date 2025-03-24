@@ -1,0 +1,8 @@
+using System.Linq;
+public class Kata
+{
+  public static int[] GenerateRange(int min, int max, int step)
+  {
+    return Enumerable.Range(0, (max - min) / step + 1).Select(i => min + i * step).ToArray();
+  }
+}
