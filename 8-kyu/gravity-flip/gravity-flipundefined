@@ -1,0 +1,17 @@
+using System.Linq;
+​
+public class Kata
+{
+    public static int[] Flip(char dir, int[] arr)
+    {
+        if (dir == 'R')
+        {
+            return arr.OrderBy(x => x).ToArray();
+        }
+        if (dir == 'L')
+        {
+            return arr.OrderByDescending(x => x).ToArray();
+        }
+        return arr;
+    }
+}
