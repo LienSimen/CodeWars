@@ -1,0 +1,18 @@
+using System.Linq;
+class Kata
+{
+  public static string Solve(string s)
+  {
+    var upper = s.ToCharArray().Count(char.IsUpper);
+    var lower = s.ToCharArray().Count(char.IsLower);
+    if (upper == lower || lower > upper)
+    {
+      return s.ToLower();
+    }
+    if (lower < upper)
+    {
+      return s.ToUpper();
+    }
+    return "";
+  }
+}
