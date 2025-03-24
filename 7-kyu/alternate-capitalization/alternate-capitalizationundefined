@@ -1,0 +1,19 @@
+using System;
+using System.Linq;
+​
+public static class Kata
+{
+    public static string[] Capitalize(string s)
+    {
+        string first = new string(s.ToCharArray()
+            .Select((c, i) => i % 2 == 0 ? char.ToUpper(c) : char.ToLower(c))
+            .ToArray());
+        
+        string second = new string(s.ToCharArray()
+            .Select((c, i) => i % 2 != 0 ? char.ToUpper(c) : char.ToLower(c))
+            .ToArray());
+        
+        return new string[] { first, second };
+    }
+}
+​
