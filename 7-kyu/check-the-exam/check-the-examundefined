@@ -1,0 +1,12 @@
+using System;
+using System.Linq;
+​
+public static class Kata
+{
+    public static int CheckExam(string[] arr1, string[] arr2)
+    {
+        int score = arr1.Zip(arr2, (a, b) => a == b ? 4 : string.IsNullOrEmpty(b) ? 0 : -1).Sum();
+        return Math.Max(score, 0);
+    }
+}
+​
