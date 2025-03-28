@@ -1,0 +1,14 @@
+using System;
+public static class Kata
+{
+    public static string Hello(string name = "World")
+    {
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            name = "World";
+        }
+        
+        var normalizedName = System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(name.ToLower());
+        return $"Hello, {normalizedName}!";
+    }
+}
