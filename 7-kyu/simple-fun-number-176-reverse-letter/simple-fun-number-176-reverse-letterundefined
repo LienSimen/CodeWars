@@ -1,0 +1,11 @@
+namespace myjinxin
+{
+    using System.Linq;
+    
+    public class Kata
+    {
+        public string ReverseLetter(string str){
+          return new string(str.Reverse().Where(c => char.IsLetter(c)).ToArray());
+        }
+    }
+}
