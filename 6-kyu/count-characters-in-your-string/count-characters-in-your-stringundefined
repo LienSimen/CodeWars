@@ -1,18 +1,16 @@
- 
-using System;
 using System.Collections.Generic;
+using System;
 using System.Linq;
 ​
 public class Kata
 {
-    public static Dictionary<char, int> Count(string str)
+  public static Dictionary<char, int> Count(string str)
+  {
+    if (string.IsNullOrEmpty(str))
     {
-        if (string.IsNullOrEmpty(str))
-        {
-            return new Dictionary<char, int>();
-        }
-​
-        return str.GroupBy(c => c).ToDictionary(g => g.Key, g => g.Count());
+        return new Dictionary<char, int>();
     }
+    return str.GroupBy(c => c)
+              .ToDictionary(group => group.Key, group => group.Count());
+  }
 }
-​
