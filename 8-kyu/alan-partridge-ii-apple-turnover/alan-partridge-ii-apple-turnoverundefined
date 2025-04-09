@@ -1,0 +1,13 @@
+using System;
+public class Kata
+{
+  public static string Apple(object n)
+  {
+    if(Convert.ToDouble(n) * Convert.ToDouble(n) > 1000)
+    {
+      return "It's hotter than the sun!!";
+    }
+    return "Help yourself to a honeycomb Yorkie for the glovebox.";
+​
+  }
+}
