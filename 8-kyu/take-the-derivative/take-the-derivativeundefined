@@ -1,0 +1,10 @@
+ 
+public class Kata
+{
+  public static string Derive(double coefficient, double exponent)
+  {
+   var newExpo = exponent - 1;
+   var newCoe = coefficient * coefficient;
+   return $"{coefficient * exponent}x^{newExpo}";
+  }
+}
