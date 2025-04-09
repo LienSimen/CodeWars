@@ -1,10 +1,10 @@
- 
 using System;
+using System.Numerics; // Required for BitOperations
 ​
 public static class Kata
 {
   public static bool PowerOfTwo(int n)
   {
-    return (n > 0) && ((n & (n - 1)) == 0);
+      return n > 0 && BitOperations.PopCount((uint)n) == 1;
   }
 }
