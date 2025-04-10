@@ -1,0 +1,28 @@
+using System;
+using System.Linq;
+​
+public class MaxDiffLength 
+{
+    
+    public static int Mxdiflg(string[] a1, string[] a2)
+    {
+        if (a1 == null || a2 == null || !a1.Any() || !a2.Any())
+        {
+            return -1;
+        }
+​
+        var lengths1 = a1.Select(s => s.Length);
+        var lengths2 = a2.Select(s => s.Length);
+​
+        int minLengthA1 = lengths1.Min();
+        int maxLengthA1 = lengths1.Max();
+​
+        int minLengthA2 = lengths2.Min();
+        int maxLengthA2 = lengths2.Max();
+​
+        int diff1 = Math.Abs(maxLengthA1 - minLengthA2);
+        int diff2 = Math.Abs(maxLengthA2 - minLengthA1);
+​
+        return Math.Max(diff1, diff2);
+    }
+}
