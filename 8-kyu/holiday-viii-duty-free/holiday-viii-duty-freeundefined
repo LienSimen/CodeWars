@@ -1,0 +1,11 @@
+public class Kata
+{
+  public static int DutyFree(int normPrice, int Discount, int hol)
+  {
+    if (normPrice * Discount != 0)
+    {
+      return (hol * 100) / (normPrice * Discount);
+    }
+    return 0;
+  }
+}
