@@ -1,0 +1,10 @@
+public class Kata
+{
+  public static bool ArrayMadness(int[] a, int[] b)
+  {
+    int sumA = 0, sumB = 0;
+    foreach (var n in a) sumA += n * n;
+    foreach (var n in b) sumB += n * n * n;
+    return sumA > sumB;
+  }
+}
